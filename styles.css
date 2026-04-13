@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    /* flex-wrap: wrap;   */
+    height: 1000rem;
+    width: 1000rem;
+}
+.column-cell{
+ height: 50px;
+ width: 50px;
+ background-color: red;
+ border: 2px solid black;
+}
+.row-cell{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    border: 2px solid black;
+}
