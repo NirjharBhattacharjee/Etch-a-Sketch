@@ -4,7 +4,7 @@ function createGrid(cells) {
     if(cells > 1){
         for(let i = 0; i < cells; i++){
             const column = document.createElement("div");
-            for (let j = 0; j <= cells ; j++) {
+            for (let j = 0; j < cells ; j++) {
                 const row = document.createElement("div");
                 row.classList="row-cell";
                 column.appendChild(row);
@@ -15,5 +15,6 @@ function createGrid(cells) {
    
 } 
 }
+createGrid(8);
 
-createGrid(16);
+// 
