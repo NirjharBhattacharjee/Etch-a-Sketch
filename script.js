@@ -15,5 +15,42 @@ function createGrid(height =16, width =16) {
 
 };   
 };
+
+function updateGrid(){
+    const height = document.querySelector('#height');
+    const width = document.querySelector('#width');
+    const heightOutput = document.querySelector('#height-value');
+    const widthOutput = document.querySelector('#width-value');
+
+    let currentHeight = 16;
+    let currentWidth = 16;
+    
+    height.addEventListener("input", e => {
+        currentHeight = e.target.value;
+        heightOutput.textContent = e.target.value;
+        // console.log(`this is current height ${currentHeight}`);
+    });
+
+    width.addEventListener("input",e =>{
+        currentWidth = e.target.value;
+        widthOutput.textContent = e.target.value;
+        // console.log(`this is current Width ${currentWidth}`);
+    })
+    console.log(`this is current height ${currentHeight}`);
+    console.log(`this is current Width ${currentWidth}`);
+}
+// const height = document.querySelector('#height');
+// const heightOutput = document.querySelector('#height-value');
+
+// let currentHeight = 16;
+
+// let newHeight =  height.addEventListener("input", e => {
+//         currentHeight = e.target.value;
+//         heightOutput.textContent = e.target.value;
+//         console.log(`this is current height ${currentHeight}`);
+//         });
+//         console.log(`this is current height ${newHeight}`);
+
+updateGrid();
 createGrid();
 
