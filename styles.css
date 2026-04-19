@@ -36,7 +36,7 @@ section {
     accent-color:#ebebeb;
 }
 .container{
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     width: 32rem; 
 }

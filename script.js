@@ -16,6 +16,23 @@ function createGrid(height =16, width =16) {
 };   
 };
 
+function onHover(){
+    const colorCell = document.querySelectorAll('.cell');
+    const colorSelector = document.querySelector('#color-selector');
+    const defaultColor = "#ebebeb";
+    let newColor = defaultColor;
+
+    colorSelector.addEventListener("input", (e)=>{
+        newColor = e.target.value;
+    });
+
+    colorCell.forEach(cells =>{
+    cells.addEventListener("mouseenter", (e)=>{
+        e.target.style.backgroundColor = newColor;
+    });
+});
+};
+
 function updateGrid(){
     const height = document.querySelector('#height');
     const width = document.querySelector('#width');
@@ -26,31 +43,20 @@ function updateGrid(){
     let currentWidth = 16;
     
     height.addEventListener("input", e => {
-        currentHeight = e.target.value;
         heightOutput.textContent = e.target.value;
-        // console.log(`this is current height ${currentHeight}`);
+        currentHeight = e.target.value;
     });
 
     width.addEventListener("input",e =>{
-        currentWidth = e.target.value;
         widthOutput.textContent = e.target.value;
-        // console.log(`this is current Width ${currentWidth}`);
+        currentWidth = e.target.value;  
     })
     console.log(`this is current height ${currentHeight}`);
     console.log(`this is current Width ${currentWidth}`);
+    
 }
-// const height = document.querySelector('#height');
-// const heightOutput = document.querySelector('#height-value');
 
-// let currentHeight = 16;
-
-// let newHeight =  height.addEventListener("input", e => {
-//         currentHeight = e.target.value;
-//         heightOutput.textContent = e.target.value;
-//         console.log(`this is current height ${currentHeight}`);
-//         });
-//         console.log(`this is current height ${newHeight}`);
-
-updateGrid();
 createGrid();
+updateGrid();
+onHover();
 
